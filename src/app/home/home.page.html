@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Piadas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    Escolha a piada.
+    
+    <!-- <ion-button color="primary" (click)="showjoke()">Exibir piada Show!</ion-button>
+
+    <img height="100px;" [src]="url" alt="" >
+
+    <h1>{{ piada?.pergunta }}</h1>
+    <h3>{{ piada?.resposta }}</h3> (change)="informaNome($event.target.value)" -->
+
+    <ion-input [(ngModel)]="valorInput" placeholder="Digite um termo"></ion-input>
+
+    <ion-button color="primary" [disabled]="!valorInput" (click)="informaNome()">Pesquisar</ion-button>
+
+
+    <div *ngFor="let piada of piadas">
+      <p><b>Pergunta :</b>{{ piada.pergunta }}</p>
+      <p><b>Resposta :</b>{{ piada.resposta }}</p>
+    </div>
+
+  
+  </div>
+
+
+</ion-content>
