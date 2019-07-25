@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JokesService } from '../service/jokes.service';
 
 @Component({
   selector: 'app-detalhe',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalhePage implements OnInit {
 
-  constructor() { }
+  constructor(private jokesService: JokesService) { }
 
   ngOnInit() {
+    this.jokesService.piadaSelecionada;
   }
 
 }

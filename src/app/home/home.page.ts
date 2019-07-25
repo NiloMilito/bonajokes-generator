@@ -43,11 +43,9 @@ export class HomePage {
     });      
   }
 
-  // filterLocations(searchTerm){
-  //   return this.data.filter((location) => {
-  //     return location.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
-  //   });
-  // }
+  prepareToDe(piada: any){
+    this.jokesService.piadaSelecionada = piada
+  }
 
   async presentAlert() {
     const alert = await this.alertController.create({

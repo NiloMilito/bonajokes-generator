@@ -23,8 +23,10 @@
 
 
     <div *ngFor="let piada of piadas">
-      <p><b>Pergunta :</b>{{ piada.pergunta }}</p>
-      <p><b>Resposta :</b>{{ piada.resposta }}</p>
+      <a (click)="prepareToDe(piada)" [routerLink] = "['/detalhe/']" >
+          <p><b>Pergunta :</b>{{ piada.pergunta }}</p> 
+      </a>
+      <!-- <p><b>Resposta :</b>{{ piada.resposta }}</p> -->
     </div>
 
   

@@ -7,10 +7,12 @@ import {HttpClient } from '@angular/common/http';
 export class JokesService {
 
   url='/assets/trocadilhos.json';
+  piadaSelecionada: any;
 
   constructor(private http: HttpClient) { }
 
   getAllJokes( ){
     return this.http.get<any[]>(this.url);
   }
+
 }
